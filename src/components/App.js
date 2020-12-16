@@ -1,18 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchPatterns } from '../actions';
 
-const App = () => {
-  return (
-    <div>
-      <form id="search">
-        <label>Pattern keyword(s): </label>
-        <input type="text" id="searchTerm" value="begin" />
-        <input type="submit" value="search" />
-      </form>
-      <canvas id="mycanvas" width="720" height="360"></canvas>
+class App extends React.Component {
+  componentDidMount() {
+    this.props.fetchPatterns();
+  }
 
-      <h2 id="title">Title</h2>
-    </div>
-  );
+  render() {
+    console.log(this.props.patterns);
+    return (
+      <div>
+        <h2 id="title">Title</h2>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    patterns: state.patterns,
+  };
 };
 
-export default App;
+export default connect(mapStateToProps, { fetchPatterns })(App);
