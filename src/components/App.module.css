@@ -1,0 +1,62 @@
+.App {
+  position: relative;
+  width: 754px;
+  padding: 40px 30px 40px 52px;
+  margin: 20px auto;
+  font-family: Georgia, "Times New Roman", serif;
+  border: solid 1px #222;
+  border-radius: 40px;
+  box-shadow: 12px 12px 12px #000;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.search {
+  text-align: center;
+  width: 724px;
+  height: 30px;
+}
+
+.search label {
+  color: #999;
+  font-style: italic;
+}
+
+.search input[type="text"] {
+  font-family: helvetica, arial, sans-serif;
+  background: #222;
+  color: #999;
+  padding-left: 4px;
+  border: none;
+}
+
+.search input[type="submit"] {
+  background: #1f1f1f;
+  font-size: 0.8em;
+  color: #ccc;
+  font-style: italic;
+  margin-left: 0.25em;
+  padding: 0 20px;
+  border: solid 2px #111;
+  border-radius: 6px;
+}
+
+.myCanvas {
+  width: 720px;
+  height: 360px;
+  margin: 20px 0;
+  border: solid 4px #ccc;
+  box-shadow: 12px 12px 12px #000;
+}
+
+.myCanvas:hover {
+  cursor: pointer;
+}
