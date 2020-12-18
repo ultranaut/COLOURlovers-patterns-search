@@ -9,16 +9,6 @@
   box-shadow: 12px 12px 12px #000;
 }
 
-.title {
-  text-align: center;
-  font-size: 2.5em;
-  color: #fff;
-  font-weight: normal;
-  font-style: italic;
-  text-transform: lowercase;
-  margin: 0;
-}
-
 .search {
   text-align: center;
   width: 724px;
@@ -47,16 +37,4 @@
   padding: 0 20px;
   border: solid 2px #111;
   border-radius: 6px;
-}
-
-.myCanvas {
-  width: 720px;
-  height: 360px;
-  margin: 20px 0;
-  border: solid 4px #ccc;
-  box-shadow: 12px 12px 12px #000;
-}
-
-.myCanvas:hover {
-  cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPatterns } from '../actions';
+import Details from './Details';
 import styles from './App.module.css';
 
 class App extends React.Component {
@@ -17,9 +18,7 @@ class App extends React.Component {
           <input type="text" id="searchTerm" value="begin" />
           <input type="submit" value="search" />
         </form>
-        <canvas className={styles.myCanvas}></canvas>
-
-        <h2 className={styles.title}>Title</h2>
+        <Details />
       </div>
     );
   }

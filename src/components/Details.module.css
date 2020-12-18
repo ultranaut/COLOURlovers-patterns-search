@@ -1,0 +1,24 @@
+.Details {
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.myCanvas {
+  width: 720px;
+  height: 360px;
+  margin: 20px 0;
+  border: solid 4px #ccc;
+  box-shadow: 12px 12px 12px #000;
+}
+
+.myCanvas:hover {
+  cursor: pointer;
+}
