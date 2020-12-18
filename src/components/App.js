@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPatterns } from '../actions';
 import Details from './Details';
+import SearchBar from './SearchBar';
 import styles from './App.module.css';
 
 class App extends React.Component {
@@ -13,11 +14,7 @@ class App extends React.Component {
     console.log(this.props.patterns);
     return (
       <div className={styles.App}>
-        <form className={styles.search}>
-          <label>Pattern keyword(s): </label>
-          <input type="text" id="searchTerm" value="begin" />
-          <input type="submit" value="search" />
-        </form>
+        <SearchBar />
         <Details />
       </div>
     );

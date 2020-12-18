@@ -1,0 +1,29 @@
+.search {
+  text-align: center;
+  width: 724px;
+  height: 30px;
+}
+
+.search label {
+  color: #999;
+  font-style: italic;
+}
+
+.search input[type="text"] {
+  font-family: helvetica, arial, sans-serif;
+  background: #222;
+  color: #999;
+  padding-left: 4px;
+  border: none;
+}
+
+.search input[type="submit"] {
+  background: #1f1f1f;
+  font-size: 0.8em;
+  color: #ccc;
+  font-style: italic;
+  margin-left: 0.25em;
+  padding: 0 20px;
+  border: solid 2px #111;
+  border-radius: 6px;
+}
