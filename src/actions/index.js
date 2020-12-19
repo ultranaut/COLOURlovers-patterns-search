@@ -10,3 +10,10 @@ export const fetchPatterns = (keyword = 'begin') => (dispatch) => {
 
   colourlovers(keyword, callback);
 };
+
+export const setSelectedPattern = (pattern = null) => {
+  return {
+    type: 'SET_SELECTED_PATTERN',
+    payload: pattern,
+  };
+};

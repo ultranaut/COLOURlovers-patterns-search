@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchPatterns } from '../actions';
+import { fetchPatterns, setSelectedPattern } from '../actions';
 import Details from './Details';
 import SearchBar from './SearchBar';
 import styles from './App.module.css';
 
-const App = ({ patterns, fetchPatterns }) => {
+const App = ({ patterns, fetchPatterns, setSelectedPattern }) => {
   useEffect(() => {
     fetchPatterns();
   }, [fetchPatterns]);
 
-  console.log(patterns);
+  // whenever a new pattern set is loaded, reset selectedPattern
+  useEffect(() => {
+    setSelectedPattern(patterns[0]);
+  }, [patterns, setSelectedPattern]);
 
   return (
     <div className={styles.App}>
@@ -26,4 +29,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchPatterns })(App);
+export default connect(mapStateToProps, { fetchPatterns, setSelectedPattern })(
+  App
+);

@@ -1,14 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styles from './Details.module.css';
 
-const Details = (pattern) => {
+const Details = ({ pattern }) => {
+  console.log('PATTERN:', pattern);
+
+  if (pattern === null) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className={styles.Details}>
       <canvas className={styles.myCanvas}></canvas>
 
-      <h2 className={styles.title}>Title</h2>
+      <h2 className={styles.title}>{pattern.title}</h2>
     </div>
   );
 };
 
-export default Details;
+const mapStateToProps = (state) => {
+  return {
+    pattern: state.selectedPattern,
+  };
+};
+
+export default connect(mapStateToProps)(Details);

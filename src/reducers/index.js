@@ -10,6 +10,16 @@ const fetchPatternsReducer = (patterns = [], action) => {
   }
 };
 
+const setSelectedPatternReducer = (pattern = null, action) => {
+  switch (action.type) {
+    case 'SET_SELECTED_PATTERN':
+      return action.payload;
+    default:
+      return pattern;
+  }
+};
+
 export default combineReducers({
   patterns: fetchPatternsReducer,
+  selectedPattern: setSelectedPatternReducer,
 });
